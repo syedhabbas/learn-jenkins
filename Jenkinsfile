@@ -3,9 +3,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Building Pipeline...!'
+            }
+        }
+         stage('Test') {
+            steps {
+                echo 'Testing Pipeline...!'
             }
         }
     }
