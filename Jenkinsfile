@@ -5,7 +5,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building Pipeline...!'
+                sh '''
+                    echo "Building Pipeline...!"
+                    npm --version
+                '''
             }
         }
          stage('Test') {
