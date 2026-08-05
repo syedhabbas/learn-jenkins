@@ -14,6 +14,8 @@ pipeline {
                 sh '''
                     echo "Building Pipeline...!"
                     npm --version
+                    npx --version
+                    node --version
                 '''
             }
         }
