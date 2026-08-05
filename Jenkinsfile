@@ -13,9 +13,12 @@ pipeline {
             steps {
                 sh '''
                     echo "Building Pipeline...!"
+                    ls -lap
+                    node --version
                     npm --version
                     npx --version
-                    node --version
+                    npm ci
+                    npm run build
                     ls -lap
                 '''
             }
