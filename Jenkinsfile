@@ -16,6 +16,7 @@ pipeline {
                     npm --version
                     npx --version
                     node --version
+                    ls -lap
                 '''
             }
         }
