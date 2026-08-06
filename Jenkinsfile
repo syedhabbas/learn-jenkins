@@ -10,6 +10,7 @@ pipeline {
                     reuseNode true
                 }
             }
+            // npm ci, creates node_modules folder with fresh installed files.
             steps {
                 sh '''
                     echo "Building Pipeline...!"
@@ -37,6 +38,11 @@ pipeline {
                 npm test
                 '''
             }
+        }
+    }
+    post {
+        always {
+            junit 'test-results/junit.xml'
         }
     }
 }
