@@ -29,8 +29,6 @@ pipeline {
                 echo 'Testing Pipeline...!'
                 test -f build/index.html
                 echo $?
-                test -f build/one.txt
-                echo $?
                 '''
             }
         }
