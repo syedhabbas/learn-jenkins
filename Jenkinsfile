@@ -31,6 +31,7 @@ pipeline {
                     reuseNode true
                 }
             }
+            // npm test, will create folder test-results/junit.xml & in post block we will make junit report. 
             steps {
                 sh '''
                 echo 'Testing Pipeline...!'
@@ -40,10 +41,16 @@ pipeline {
             }
         }
     }
+    stage ('E2E') {
+        steps {
+            sh '''
+                echo 'E2E Pipeline...'
+            '''
+        }
+    }
     post {
         always {
             junit 'test-results/junit.xml'
         }
     }
 }
-
