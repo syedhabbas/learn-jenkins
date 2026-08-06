@@ -29,6 +29,7 @@ pipeline {
                 echo 'Testing Pipeline...!'
                 test -f build/index.html
                 echo $?
+                ls -lap build
                 '''
             }
         }
