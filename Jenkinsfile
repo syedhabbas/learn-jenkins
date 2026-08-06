@@ -40,12 +40,12 @@ pipeline {
                 '''
             }
         }
-    }
-    stage ('E2E') {
-        steps {
-            sh '''
-                echo 'E2E Pipeline...'
-            '''
+         stage ('E2E') {
+            steps {
+                sh '''
+                    echo 'E2E Pipeline...'
+                '''
+            }
         }
     }
     post {
